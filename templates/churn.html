@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrediPlus - Churn Prediction</title>
+    <link rel="stylesheet" href="static/css1.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Customer Churn Analysis</h1>
+        <a href="/" class="home-button">Home</a>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <h2>Predict Customer Churn</h2>
+            <p>Use machine learning models to predict whether a customer is likely to churn</p>
+        </section>
+
+        <div class="options-container">
+            <div class="option-card">
+                <h3>Custom Prediction</h3>
+                <form action="/predict_by_input" method="POST">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="credit_score">Credit Score</label>
+                            <input type="number" name="credit_score" min="300" max="850" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="age">Age</label>
+                            <input type="number" name="age" min="18" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="tenure">Tenure (Years)</label>
+                            <input type="number" name="tenure" min="0" max="10" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="balance">Account Balance</label>
+                            <input type="number" name="balance" step="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="num_of_products">Number of Products</label>
+                            <input type="number" name="num_of_products" min="1" max="4" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="estimated_salary">Estimated Salary</label>
+                            <input type="number" name="estimated_salary" step="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="has_cr_card">Has Credit Card</label>
+                            <select name="has_cr_card" required>
+                                <option value="">Select Option</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="is_active_member">Is Active Member</label>
+                            <select name="is_active_member" required>
+                                <option value="">Select Option</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="gender">Gender</label>
+                            <select name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="geography">Geography</label>
+                            <select name="geography" required>
+                                <option value="">Select State</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Kerala">Kerala</option>
+                                <!-- Add more as needed -->
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="marital_status">Marital Status</label>
+                            <select name="marital_status" required>
+                                <option value="">Select Marital Status</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Analyze & Predict</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
