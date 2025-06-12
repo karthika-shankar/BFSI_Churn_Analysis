@@ -1,0 +1,81 @@
+
+body {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    max-width: 700px;
+    padding-right: 50px;
+    padding-top: 120px;
+}
+
+.hero h2 {
+    margin-top:150px;
+    font-size: 75px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    
+}
+
+.hero p {
+    font-size: 15px;
+    font-weight: 200;
+    margin:0;
+    
+}
+
+.cta-button {
+    margin-top: 20px;
+    background-color: white;
+    color: #003366;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 999px;
+    width: fit-content;
+}
+
+.cta-button:hover {
+    background-color: rgb(238, 227, 227);
+}
+.option-section {
+    margin: 40px auto;
+    width: 60%;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    display: inline-block;
+    width: 200px;
+    margin-top: 10px;
+}
+
+form input, form select {
+    width: 200px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
